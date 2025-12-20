@@ -35,7 +35,8 @@ dev = [
     "gitingest",
     "poethepoet",
     "radon",
-    "skylos"
+    "skylos",
+    "ty"
 ]
 
 [tool.setuptools.packages.find]
@@ -52,15 +53,19 @@ exclude = ["tests*", "scripts*", "docs*", "examples*"]
 format = [
     {cmd = "ruff format ."},
     {cmd = "ruff check . --fix"},
-    {cmd = "basedpyright --level error"}
+    {cmd = "basedpyright --level error"},
+    {cmd = "ty check ."}
 ]
 
 # Run with: poe check
 # Lint and type check without fixing
 check = [
     {cmd = "ruff check ."},
-    {cmd = "basedpyright --level error"}
+    {cmd = "basedpyright --level error"},
+    {cmd = "ty check ."}
 ]
+
+ty = {cmd = "ty check ."}
 
 # Run with: poe lint or uv run poe lint
 # Only linting, no type checking
@@ -84,6 +89,7 @@ quality = [
     {cmd = "ruff format ."},
     {cmd = "ruff check . --fix"},
     {cmd = "basedpyright --level error"},
+    {cmd = "ty check ."},
     {cmd = "radon cc . -a -nb"},
     {cmd = "skylos . --quality --danger"},
 ]
