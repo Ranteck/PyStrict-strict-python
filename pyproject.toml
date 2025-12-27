@@ -30,7 +30,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "basedpyright>=1.31.7",
-    "pre-commit",
+    "prek",
     "ruff",
     "gitingest",
     "poethepoet",
@@ -362,6 +362,11 @@ exclude_lines = [
     "if TYPE_CHECKING:",
     "@abstractmethod",
     "@overload",
+]
+
+[dependency-groups]
+dev = [
+    "prek>=0.2.25",
 ]
 
 # ============================================================

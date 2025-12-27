@@ -101,18 +101,18 @@ You don’t have to adopt everything at once. For an existing codebase you can *
    uv pip install -e ".[dev]"
    ```
 
-5. **Set up pre-commit hooks** (optional but recommended):
+5. **Set up prek hooks** (optional but recommended):
 
    ```bash
-   # Install pre-commit hooks
-   uv run pre-commit install
-   uv run pre-commit install --hook-type pre-push
+   # Install prek hooks
+   uv run prek install
+   uv run prek install --hook-type pre-push
    
    # Optional: run on all files to verify
-   uv run pre-commit run --all-files
+   uv run prek run --all-files
    
    # Update hooks periodically
-   uv run pre-commit autoupdate
+   uv run prek auto-update
    ```
 
 6. **Run the tools and fix issues iteratively** (see commands below).

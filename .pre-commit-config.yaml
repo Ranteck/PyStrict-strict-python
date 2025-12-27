@@ -1,4 +1,4 @@
-# Run `uv run pre-commit autoupdate` periodically to update hook versions
+# Run `uv run prek auto-update` periodically to update hook versions
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.8
