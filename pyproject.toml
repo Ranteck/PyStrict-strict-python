@@ -6,7 +6,7 @@
 # ============================================================
 
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=82.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -18,10 +18,10 @@ license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "pydantic>=2.0.0",
-    "types-requests",
-    "python-dotenv",
-    "typing-extensions>=4.12",
+    "pydantic>=2.12",
+    "types-requests>=2.33",
+    "python-dotenv>=1.2",
+    "typing-extensions>=4.15",
     # Uncomment if using pandas/polars for DataFrame schema validation:
     # "pandera[strategies]>=0.20.0",  # With hypothesis strategies for testing
     # "pandas>=2.0.0",  # or "polars>=0.19.0"
@@ -29,14 +29,14 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "basedpyright>=1.31.7",
-    "prek",
-    "ruff",
-    "gitingest",
-    "poethepoet",
-    "radon",
-    "skylos",
-    "ty"
+    "basedpyright>=1.39",
+    "prek>=0.3.8",
+    "ruff>=0.15",
+    "gitingest>=0.3",
+    "poethepoet>=0.44",
+    "radon>=6.0",
+    "skylos>=4.2",
+    "ty>=0.0.29"
 ]
 
 [tool.setuptools.packages.find]
@@ -366,7 +366,7 @@ exclude_lines = [
 
 [dependency-groups]
 dev = [
-    "prek>=0.2.25",
+    "prek>=0.3.8",
 ]
 
 # ============================================================
